@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import {Provider} from 'react-redux';
-
 import Persons from './containers/Persons';
 
 class App extends Component {
