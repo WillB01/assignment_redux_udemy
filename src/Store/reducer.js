@@ -6,8 +6,8 @@ const reducer = (state = initialState, actions) =>  {
     if ( actions.type === 'PERSON_ADD') {
         const newPerson = {
             id: Math.random(), // not really unique but good enough here!
-            name: 'Max',
-            age: Math.floor( Math.random() * 40 )
+            name: actions.personData.name,
+            age: actions.personData.age
         };
         const newPersonArr = state.persons.concat(newPerson);
         return {

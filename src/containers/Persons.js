@@ -27,7 +27,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        personAddedHandler: () => dispatch({type: 'PERSON_ADD'}),
+        personAddedHandler: (name,age) => dispatch({type: 'PERSON_ADD', personData: {
+            name: name,
+            age: age
+        }}),
         onPersonDeleteHandler: (id) => dispatch({type: 'PERSON_DELETE', id: id})
     }
 }
